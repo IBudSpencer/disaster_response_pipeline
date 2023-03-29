@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 Udacity Nanodegree Data Scientist Project #2
-
+This project builts a machine learning pipeline for emergency text messages in order to improve disaster response.
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
     - Activate disaster_response_pipeline_env environment
