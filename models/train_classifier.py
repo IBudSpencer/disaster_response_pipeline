@@ -25,8 +25,8 @@ nltk.download(['punkt', 'wordnet', 'stopwords', 'words'])
 
 def load_data(database_filepath):
     """
-    Loads data from SQL Database and transforms it for model training
-    
+    Loads data from SQL DB     
+
     :param database_filepath: SQL database file (string)
     
     :returns x: Features (dataframe)
@@ -51,8 +51,8 @@ def load_data(database_filepath):
 
 def tokenize(text):
     """
-    Tokenizes text data using
-    
+    Tokenizes text data 
+
     :param text: Messages as text data (string)
     
     :returns lem: Processed text after normalizing, tokenizing and lemmatizing (list)
@@ -78,8 +78,7 @@ def tokenize(text):
 
 def build_model():
     """
-    Builds a model using Random Forest Classifier. Data is transformed in pipeline using Tokenization, Count Vectorizer,
-    Tfidf Transformer and
+    Builds a model. Data is transformed in pipeline.
     
     :return cv: Trained model after performing grid search (GridSearchCV model)
     """
@@ -154,7 +153,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 def save_model(model, model_filepath):
     """
-    Function to save trained model as pickle file.
+    save trained model as pickle file.
     :param model: Trained model (GridSearchCV Object)
     :param model_filepath: Filepath to store model (string)
     :return: None
@@ -164,7 +163,7 @@ def save_model(model, model_filepath):
 
 def save_report(df_report):
     """
-     Function to save the score of the trained model on test data
+     save the score of the trained model on test data
     
     :param: df_report: Dataframe containing the classification report
     :return: None
